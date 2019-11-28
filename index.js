@@ -20,9 +20,22 @@ function getBreweries(state) {
 function displayResults(responseJson) {
   $("#results").empty();
 
-  $("#results").append(`${responseJson[19].name}`);
+  responseJson.forEach(function(i) {
+    $(".js-search-results").append(`
+    <p>
+    ${i.name}
+    </p>
+    <a target="_blank" href="${i.website_url}" >
+    Visit their site
+    </a>
+    `);
+  });
 
   $("#results").removeClass("hidden");
+
+  $("#resultsLink").removeClass("hidden");
+
+  console.log(responseJson);
 }
 
 function watchForm() {

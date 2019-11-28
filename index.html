@@ -1,7 +1,7 @@
 <!-- This app doesn't follow a11y best practices, and the JS file is incomplete. Complete the getBreweries, displayResults, and watchSubmit functions. When you're done, this app should allow a user to search for a state, and display a list of breweries in that state. The list should include the brewery's name and a link to their website. You should make requests to this API: https://www.openbrewerydb.org/ . Make any necessary adjustments to make this app accessible. -->
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -16,7 +16,7 @@
   <body>
     <h1>Find a brewery</h1>
     <form action="#" class="js-search-form">
-      <span>Search by state:</span>
+      <label for="state">Search by state:</label>
       <input
         type="text"
         class="js-query"
@@ -26,7 +26,6 @@
       />
       <button type="submit">Search</button>
     </form>
-    <h2 id="results" class="hidden"></h2>
     <div class="js-search-results"></div>
     <script src="index.js"></script>
   </body>
